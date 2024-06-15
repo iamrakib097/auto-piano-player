@@ -1,0 +1,97 @@
+.piano {
+    display: flex;
+    flex-wrap:wrap;
+    max-width: 1800px;
+    margin: 90px auto;
+    align-items: left;
+    
+}
+.key {
+    border: 1px solid #000;
+    width: 80px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+}
+.white {
+    background-color: #fff;
+}
+.black {
+    background-color: #000;
+    color: #fff;
+    z-index: 1;
+    margin: 0 -25px;
+    width: 30px;
+    height: 120px;
+}
+.key.playing {
+    animation: keyPress 0.3s linear;
+    background-color: rgba(138, 138, 138, 0.329);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+@keyframes keyPress {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.90); }
+    100% { transform: scale(1); }
+}
+
+.input_btn{
+    display: flex;
+
+}
+input{
+    border: none;
+    outline: none;
+    width: 1000px;
+    height: 50px;
+    padding: 5px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    color: #3b3b3b;
+    font-size: 10;
+    
+}
+input::placeholder{
+    color: #7a7a7a;
+    font-size: 20px;
+}
+button{
+    padding: 20px 100px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+button:active{
+    text-shadow: -4px 0px 26px rgba(0,0,0,0.75);
+}
+button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+}
+.Example{
+    font-size: 1rem;
+    color: #3b3b3b;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {background-color: #FFFFFF};

@@ -1,8 +1,9 @@
+
 .piano {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1800px;
-    margin: 90px auto;
+    width: 100%;
+    margin: 10px auto;
     align-items: left;
     background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
     border-radius: 10px;
@@ -103,6 +104,7 @@ button {
 }
 
 button:hover {
+    padding: 18px 98px;
     background-color: white;
     color: black;
     border: 2px solid rgba(0, 0, 0, 0.7);
@@ -119,20 +121,21 @@ button:active {
     color: #3b3b3b;
     margin-top: 50px;
     text-align: center;
+    
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 1px;
     align-items: center;
     justify-content: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 50px;
-    margin: 50px auto;
-    max-width: 1200px;
+    margin: 20px auto;
+    max-width: 1800px;
 }
 
 .wrapper {

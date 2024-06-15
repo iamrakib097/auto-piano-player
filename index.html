@@ -94,20 +94,29 @@
             <div class="key white" data-note="G7">G7</div>
             <div class="key black" data-note="Ab7">Ab7</div>
             <div class="key white" data-note="A7">A7</div>
-            <div class="Example">
-                <h3>Example sequence:</h3>
-                C4, E4, G4, C5, E5, D5, C5, G4, E4, G4, C4, A3, C4, E4, G4, E4, C4, G3, F4, A4, C5, F5, A5, G5, F5, D5, A4, C5, F4, D4, F4, A4, F4, D4, A3, G4, B4, D5, G5, B5, A5, G5, E5, 
-                B4, D5, G4, E4, G4, B4, G4, E4, B3, A4, C5, E5, A5, C6, B5, A5, F5, C5, E5, A4, F4, A4, C5, A4, F4, C4, D4, F4, A4, D5, F5, E5, D5, B4, F4, A4, D4, B3, D4, F4, D4, B3, F3, E4,
-                G4, B4, E5, G5, F5, E5, C5, G4, 
-                B4, E4, C4, E4, G4, E4, C4, G3, F4, A4, C5, F5, A5, G5, F5, D5, A4, C5, F4, D4, F4, A4, F4, D4, A3, G4, B4, D5, G5, B5, A5, G5, E5, B4, D5, G4, E4, G4, B4, G4, E4, B3 <br>
-                Note-1: you can user delay in milisec like A4:500 or (A4,G4,B4):900<br>
-                Note-2: you can use ( ) for multikey press like (A4,G4,B4)
-                Note-3: you can use p, mf, f, cresc, dim for dynamic marking.
-            </div>
-        
+        </div>
+        <div class="Example">
+            <h3>Example sequence:</h3>
+            f:C4>250, f:E4>250, f:G4>250, f:C5>250, f:E5>250, f:D5>250, 
+f:C5>250, f:G4>250, f:E4>250, f:G4>250, f:C4>250, f:A3>250, 
+f:C4>250, f:E4>250, f:G4>250, f:E4>250, f:C4>250, f:G3>250, 
+f:F4>250, f:A4>250, f:C5>250, f:F5>250, f:A5>250, f:G5>250,
+f:F5>250, f:D5>250, f:A4>250, f:C5>250, f:F4>250, f:D4>250, 
+f:F4>250, f:A4>250, f:F4>250, f:D4>250, f:A3>250, f:G4>250, 
+f:B4>250, f:D5>250, f:G5>250, f:B5>250, f:A5>250, f:G5>250,
+f:E5>250, f:B4>250, f:D5>250, f:G4>250, f:E4>250, f:G4>250, 
+f:B4>250, f:G4>250, f:E4>250, f:B3>250, f:A4>250, f:C5>250, 
+f:E5>250, f:A5>250, f:C6>250, f:B5>250, f:A5>250, f:F5>250,
+f:C5>250, f:E5>250, f:A4>250, f:F4>250, f:A4>250, f:C5>250, 
+f:A4>250, f:F4>250, f:C4>250, f:D4>250, f:F4>250, f:A4>250, 
+f:D5>250, f:F5>250, f:E5>250, f:D5>250, f:B4>250, f:F4>250, 
+f:A4>250, f:D4>250, f:B3>250, f:D4>250, f:F4>250, f:D4>250, 
+            <br>
+            Note-2: you can use delay after a key press like that >500 delay is in milisec
+            <br>Note-3: you can use p, mf, f for dynamic marking.
         </div>
         <div class="input_btn">
-            <input type="text" id="keySequence" placeholder="Enter sequence like A4,B4,E4:500">
+            <input type="text" id="keySequence" placeholder="Enter you note">
             <button id="playSequence">Play</button>
         </div>
 

@@ -40,6 +40,7 @@ function mapDynamicToVolume(dynamic) {
     }
 }
 
+
 function playSequence() {
     const sequenceInput = document.getElementById('keySequence').value;
     const sequences = parseSequence(sequenceInput);
@@ -72,10 +73,24 @@ function playSequence() {
                     const chords = key.slice(1, -1).split(',').map(chord => chord.trim());
                     chords.forEach((chord, chordIndex) => {
                         playSound(chord, currentDynamic);
+                        const keyElement = document.querySelector(`.key[data-note="${chord}"]`);
+                        if (keyElement) {
+                            keyElement.classList.add('playing');
+                            setTimeout(() => {
+                                keyElement.classList.remove('playing');
+                            }, 300);
+                        }
                     });
                 } else {
                     const note = key.trim();
                     playSound(note, currentDynamic);
+                    const keyElement = document.querySelector(`.key[data-note="${note}"]`);
+                    if (keyElement) {
+                        keyElement.classList.add('playing');
+                        setTimeout(() => {
+                            keyElement.classList.remove('playing');
+                        }, 300);
+                    }
                 }
             }, cumulativeDelay + index * delay);
         });
@@ -83,6 +98,27 @@ function playSequence() {
         cumulativeDelay += keys.length * delay;
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function parseSequence(sequenceInput) {

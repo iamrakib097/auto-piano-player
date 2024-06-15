@@ -1,11 +1,15 @@
 .piano {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     max-width: 1800px;
     margin: 90px auto;
     align-items: left;
-    
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
+
 .key {
     border: 1px solid #000;
     width: 80px;
@@ -17,10 +21,19 @@
     cursor: pointer;
     position: relative;
     border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s, box-shadow 0.1s;
 }
+
+.key:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .white {
     background-color: #fff;
 }
+
 .black {
     background-color: #000;
     color: #fff;
@@ -28,24 +41,30 @@
     margin: 0 -25px;
     width: 30px;
     height: 120px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 .key.playing {
     animation: keyPress 0.3s linear;
     background-color: rgba(138, 138, 138, 0.329);
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
 }
+
 @keyframes keyPress {
     0% { transform: scale(1); }
     50% { transform: scale(0.90); }
     100% { transform: scale(1); }
 }
 
-.input_btn{
+.input_btn {
     display: flex;
-
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
-input{
+
+input {
     border: none;
     outline: none;
     width: 1000px;
@@ -54,14 +73,21 @@ input{
     background-color: #e0e0e0;
     border-radius: 10px;
     color: #3b3b3b;
-    font-size: 10;
-    
+    font-size: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.1s;
 }
-input::placeholder{
+
+input:focus {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder {
     color: #7a7a7a;
     font-size: 20px;
 }
-button{
+
+button {
     padding: 20px 100px;
     background-color: rgb(0, 0, 0);
     border: none;
@@ -72,26 +98,43 @@ button{
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.1s;
+    transition: background-color 0.1s, box-shadow 0.1s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-button:active{
-    text-shadow: -4px 0px 26px rgba(0,0,0,0.75);
-}
-button:hover{
+
+button:hover {
     background-color: white;
     color: black;
     border: 2px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.Example{
+
+button:active {
+    text-shadow: -4px 0px 26px rgba(0,0,0,0.75);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Example {
     font-size: 1rem;
     color: #3b3b3b;
+    margin-top: 50px;
+    text-align: center;
 }
-.container{
-    display:flex;
+
+.container {
+    display: flex;
     flex-direction: column;
     gap: 100px;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 1200px;
 }
 
-.wrapper {background-color: #FFFFFF};
+.wrapper {
+    background-color: #FFFFFF;
+}
